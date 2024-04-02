@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery of Animals by Coral Landau</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #E0E0E0; /* אפור כהה */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #2196F3; /* תכלת */
+            font-size: 24px; /* גודל פונט */
+        }
+        nav {
+            background-color: #BDBDBD; /* אפור בהיר */
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2196F3; /* תכלת */
+            font-weight: bold;
+        }
+        #dog-icon {
+            font-size: 48px;
+            color: #2196F3; /* תכלת */
+        }
+        #cat-icon {
+            font-size: 48px;
+            color: #9C27B0; /* סגול */
+        }
+        #feedback {
+            margin-top: 20px;
+        }
+        p {
+            color: #2196F3; /* תכלת */
+            font-family: 'Pacifico', cursive;
+        }
+        .rating-button {
+            background-color: #2196F3; /* תכלת */
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .rating-button:hover {
+            background-color: #64B5F6; /* תכלת בהירה */
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* גובה קבוע */
+            overflow: hidden; /* מונע גלילה אופקית על התמונות */
+            position: relative; /* נדרש לשינויי צבע ופריסה */
+        }
+        .gallery img {
+            max-height: 100%; /* שמירה על יחסי גובה */
+            transform-origin: center center; /* התמונה תקפוץ מהמרכז */
+            transition: transform 0.5s ease; /* אנימציה חלקה */
+            position: absolute; /* התמונה תתחבר אל המיקום */
+            opacity: 0; /* התמונה לא תהיה גלויה */
+            pointer-events: none; /* לא ניתן ללחוץ על התמונה */
+        }
+        .gallery img.active {
+            opacity: 1; /* התמונה הנוכחית תהיה גלויה */
+            pointer-events: auto; /* אפשרות ללחוץ על התמונה */
+        }
+        .gallery img.next {
+            left: 100%; /* התמונה תסתתר בצד ימין */
+            transform: translateX(-100%); /* התמונה תופיע מצד שמאל */
+        }
+        .gallery img.previous {
+            left: -100%; /* התמונה תסתתר בצד שמאל */
+            transform: translateX(100%); /* התמונה תופיע מצד ימין */
+        }
+        .gallery img:hover {
+            transform: scale(1.2); /* התמונה תתרחב בהעברת העכבר מעליה */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Gallery of Animals by Coral Landau</h1>
+        <div class="gallery">
+            <img class="active" src="https://via.placeholder.com/600x300" alt="Dog 1">
+            <img class="next" src="https://via.placeholder.com/600x300" alt="Cat 1">
+            <img class="previous" src="https://via.placeholder.com/600x300" alt="Dog 2">
+        </div>
+        <div id="dog-icon">&#128021;</div>
+        <div id="cat-icon">&#128008;</div>
+        <div id="feedback">
+            <p>Does he/she like the site?</p>
+            <button class="rating-button">Rate this site</button>
+        </div>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <p style="text-align: center; font-family: 'Pacifico', cursive;">Thank you for visiting the site</p>
+
+</body>
+</html>
